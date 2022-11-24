@@ -1,0 +1,36 @@
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+api_get_users:
+    path: /api/users
+    controller: App\Controller\APIController::getAll
+    requirements:
+        idUser: '\d+'
+    methods:    GET
+
+api_get_one_user:
+    path: /api/users/{idUser}
+    controller: App\Controller\APIController::getOne
+    requirements:
+        idUser: '\d+'
+    methods:    GET
+
+api_post_users:
+    path: /api/users
+    controller: App\Controller\APIController::post
+    methods:    POST
+
+api_put_users:
+    path: /api/users/{idUser}
+    controller: App\Controller\APIController::put
+    requirements:
+        idUser: '\d+'
+    methods:    PUT
+
+api_delete_users:
+    path: /api/users/{idUser}
+    controller: App\Controller\APIController::delete
+    requirements:
+        idUser: '\d+'
+    methods:    DELETE
