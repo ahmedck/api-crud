@@ -34,3 +34,9 @@ api_delete_users:
     requirements:
         idUser: '\d+'
     methods:    DELETE
+
+
+api_get_all_products:
+    path: /api/products
+    controller: App\Controller\APIController::getAllProducts
+    methods:    GET
